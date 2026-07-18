@@ -52,7 +52,7 @@ class SettingsActivity : AppCompatActivity() {
             Prefs.PROVIDER_CLAUDE -> radioClaude.isChecked = true
             else -> radioGemini.isChecked = true
         }
-        val geminiModels = arrayOf("gemini-1.5-flash", "gemini-1.5-pro")
+        val geminiModels = arrayOf("gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-3.5-flash")
         val openAiModels = arrayOf("gpt-4o", "gpt-4o-mini")
         val claudeModels = arrayOf("claude-3-5-sonnet-latest")
 
