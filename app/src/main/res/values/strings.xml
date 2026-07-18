@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chatbot Ai</string>
+
+    <string name="login_title">Masuk</string>
+    <string name="login_subtitle">Login untuk lanjut ngobrol sama AI</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="btn_login">Masuk</string>
+    <string name="no_account_yet">Belum punya akun? Daftar</string>
+
+    <string name="register_title">Daftar Akun</string>
+    <string name="confirm_password_hint">Konfirmasi Password</string>
+    <string name="btn_register">Daftar</string>
+    <string name="have_account">Sudah punya akun? Masuk</string>
+
+    <string name="new_chat">Chat Baru</string>
+    <string name="history">Riwayat</string>
+    <string name="settings">Pengaturan</string>
+    <string name="logout">Keluar</string>
+    <string name="message_hint">Tulis pesan…</string>
+    <string name="attach_image">Lampirkan gambar</string>
+
+    <string name="settings_title">Pengaturan</string>
+    <string name="section_api_key">Masukkan API (YOUR AI API)</string>
+    <string name="api_key_hint">Tempel API Key kamu di sini…</string>
+    <string name="section_provider">Pilih jenis API Ai</string>
+    <string name="provider_gemini">Google Gemini</string>
+    <string name="provider_openai">OpenAI</string>
+    <string name="provider_claude">Anthropic Claude</string>
+    <string name="model_name_label">Nama Model (opsional)</string>
+    <string name="save">Simpan Pengaturan</string>
+
+    <string name="history_title">Riwayat Chat</string>
+    <string name="empty_history">Belum ada riwayat chat</string>
+
+    <string name="error_api_mismatch">API tidak cocok dengan model!</string>
+</resources>
