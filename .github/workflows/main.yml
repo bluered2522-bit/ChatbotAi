@@ -1,0 +1,35 @@
+name: Build Android APK Anti Gagal
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Ambil Kodingan dari Repo
+        uses: actions/checkout@v4
+
+      - name: 2. Set Up Java (JDK 17)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: 3. Pasang Gradle Otomatis
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10' # Kita paksa instal karena di repo lu ga ada gradlew
+
+      - name: 4. Masak Kode Jadi APK
+        run: gradle assembleDebug
+
+      - name: 5. Ambil File APK Hasil Masakan
+        uses: actions/upload-artifact@v4
+        with:
+          name: Aplikasi-ChatbotAi-Debug
+          path: app/build/outputs/apk/debug/*.apk
