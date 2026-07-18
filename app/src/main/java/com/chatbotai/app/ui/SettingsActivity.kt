@@ -3,6 +3,7 @@ package com.chatbotai.app.ui
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Spinner
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
@@ -21,6 +22,7 @@ class SettingsActivity : AppCompatActivity() {
 
     // Provider yang lagi ditampilin di layar (belum tentu udah disimpan)
     private var selectedProvider: String = Prefs.PROVIDER_GEMINI
+    private lateinit var etApiKey: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +34,7 @@ class SettingsActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         toolbar.setNavigationOnClickListener { finish() }
 
-        etApiKey = findViewById(R.id.etApiKey)
+        etApiKey = findViewById<EditText>(R.id.etApiKey) 
         spModel = findViewById(R.id.spModel)
         
         radioGroupProvider = findViewById(R.id.radioGroupProvider)
